@@ -1,3 +1,3 @@
 Generate Normally distributed random numbers from Uniform distribution
 
-Uses Stats1 class.
+Also uses Stats1 class.
