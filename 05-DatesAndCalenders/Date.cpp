@@ -52,6 +52,8 @@ void Date::addMonths(int m) // add months to the date
         --Year;
     }
     Day = min(Day, daysInMonth[Month]); // check day overflow
+    if (Day == 29 && m == 2 && Year % 4 != 0) // If not a leap year
+        Day = 28;
     SerialDate = DMY_to_serial(Day, Month, Year);
     return;
 }
