@@ -10,6 +10,9 @@
 #include "EurOption.hpp"
 #include "EurCall.hpp"
 #include "EurPut.hpp"
+#include "NumOption.hpp"
+#include "NumCall.hpp"
+#include "NumPut.hpp"
 
 using namespace std;
 
@@ -31,5 +34,15 @@ int main()
     cout << "Delta: " << european->DeltaByBSFormula() << endl;
     cout << "Gamma: " << european->GammaByBSFormula() << endl;
     cout << "Theta: " << european->ThetaByBSFormula() << endl;
+    
+    NumOption *approx = new NumCall(S0, K, T, sigma, r);
+    
+    const double StepSize = 0.01;
+    
+    cout << "Call Option price using approximation: " << approx->PriceByApproximation(StepSize) << endl;
+    
+    approx = new NumPut(S0, K, T, sigma, r);
+    cout << "Call Option price using approximation: " << approx->PriceByApproximation(StepSize) << endl;
+    
     return 0;
 }

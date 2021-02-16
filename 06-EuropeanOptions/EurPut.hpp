@@ -18,4 +18,6 @@ public:
     double DeltaByBSFormula(); // delta of call option
     double GammaByBSFormula(); // gamme of call option
     double ThetaByBSFormula(); // theta of call option
+    
+    double Payoff(double St) { return 0; }; // calculate payoff of option
 };

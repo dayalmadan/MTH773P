@@ -15,7 +15,7 @@ EurOption::EurOption()
 
 double EurOption::PDF(double x) // probability density function
 {
-    const double PI = atan(1.0)*4;
+    const double PI = atan(1.0) * 4;
     return (1.0/sqrt(2.0 * PI)) * exp(-0.5 * x * x);
 }
 

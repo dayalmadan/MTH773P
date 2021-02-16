@@ -24,7 +24,7 @@ double EurPut::PriceByBSFormula() // price a call option
 
 double EurPut::DeltaByBSFormula() // delta of call option
 {
-    return CDF(-DPlus());
+    return -CDF(-DPlus());
 }
 
 double EurPut::GammaByBSFormula() // gamme of call option

@@ -20,9 +20,10 @@ protected:
     double PDF(double x); // pdf of x
     double DPlus();
     double DMinus();
+    
 public:
     EurOption();
-    
+
     virtual double PriceByBSFormula() = 0; // black scholes option pricing calculation
     virtual double DeltaByBSFormula() = 0; // delta of option using BS
     virtual double GammaByBSFormula() = 0; // gamme using BS
